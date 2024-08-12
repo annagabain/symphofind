@@ -3,6 +3,10 @@
 ### The Goal:
 Symphofind is a dynamic web application that harmonizes the art of searching with precision. Designed to offer a seamless and intuitive search experience, this platform allows users to explore and filter data effectively.
 
+<img width="45%" alt="homepage mockup" src="design\mockups\desktop-homepage.png">
+<img width="45%" alt="homepage mockup" src="design\mockups\desktop-all-music.png">
+
+
 ### Features
 - **Elegant Search**: A user-friendly interface to perform searches effortlessly.
 - **Precise Filtering**: Refine search results with advanced filtering options.
