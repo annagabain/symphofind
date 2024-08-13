@@ -1,0 +1,45 @@
+/* Main content for login page */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem;
+}
+
+section.login-form,
+section.register-form {
+    background-color: var(--light-brown);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    margin: 1rem;
+
+    h2{
+        font-family: 'Merriweather', serif;
+
+    }
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--offwhite);
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--beige);
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

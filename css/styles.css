@@ -1,25 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-
 
 :root {
     --brown: #301505;
     --light-brown: #4E3628;
     --gold: #DFBC87;
-    --offwite: #F8F5F5;
+    --offwhite: #F8F5F5;
     --beige: #DACCB8;
 
 }
 
 * {
-    background-color: var(--brown);
-    color: var(--offwite);
+    font-family: 'Lato', sans-serif;
+    color: var(--offwhite);
 
-    button {
-        background-color: var(--gold);
-        color: var(--brown);
+
+    body {
+        background-color: var(--brown);
+        color: var(--offwite);
+        height: 100vh;
+        margin: 0;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: 1400px;
+        box-sizing: border-box;
     }
 
     body,
@@ -27,10 +32,39 @@
         font-family: 'Lato', sans-serif;
     }
 
+    button {
+        background-color: var(--gold);
+        color: var(--brown);
+        padding: 0.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-sizing: border-box;
+
+    }
+
+    button:hover {
+        background-color: var(--beige);
+    }
+
+    header {
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main {
+        flex: 1;
+    }
+
+
     h1,
     h2,
     h3 {
-        font-family: 'Merriweather', serif;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
     }
 
     h4,
@@ -48,6 +82,9 @@
 
     footer {
         font-size: small;
+
+        padding: 1rem;
+        text-align: right;
     }
 
 }

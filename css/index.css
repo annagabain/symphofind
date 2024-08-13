@@ -1,0 +1,44 @@
+
+header h1 {
+    visibility: hidden;
+}
+
+#logo-xxl {
+    width: 40%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+
+    #logo-xxl {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 30rem;
+        max-width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 8px;
+        flex-direction: column;
+
+        h2 {
+            font-size: xx-large;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+    }
+
+}
