@@ -1,0 +1,28 @@
+.music-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    background-color: var(--light-brown);
+    width: 100%;
+    max-width: 200px;
+
+}
+
+.composer-portrait {
+    width: 100%;
+    /* aspect-ratio: 1; */
+    object-fit: cover;
+}
+
+.music-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.composer-name {
+    font-size: 1.25rem;
+    margin: 0;
+}
