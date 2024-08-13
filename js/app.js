@@ -1,0 +1,1 @@
+// for shared behavior across different parts of the symphofind app.
