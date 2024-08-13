@@ -1,0 +1,21 @@
+.composer-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.composer-portrait {
+    width: 90%;
+    /* aspect-ratio: 1; */
+    object-fit: cover;
+}
+
+.composer-works {
+    ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+text-align: center;
+
+} 
+
