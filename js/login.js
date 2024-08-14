@@ -1,44 +1,69 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.querySelector('.login-form form');
+    const emailField = document.getElementById('email');
+    const passwordField = document.getElementById('password');
+  
+    // Prepopulate email field with stored email if available
+    // const storedEmail = localStorage.getItem('lastEnteredEmail');
+    // if (storedEmail) {
+    //   emailField.value = storedEmail;
+    // }
+  
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+  
+      const email = emailField.value;
+      const password = passwordField.value;
+  
 
-// Placeholder LOG IN
-function loginUser(username, password) {
-
-    const userData = JSON.parse(localStorage.getItem(username));
-
-
-    if (userData && userData.password === password) {
-        localStorage.setItem('loggedInUser', username);
-        console.log('User logged in successfully.');
-        return true;
-    }
-
-    console.log('Invalid username or password.');
-    return false;
-}
-
-
-function isLoggedIn() {
-    const loggedInUser = localStorage.getItem('loggedInUser');
-    return !!loggedInUser;
-}
-
-// LOG OUT
-function logoutUser() {
-
-    localStorage.removeItem('loggedInUser');
-    console.log('User logged out successfully.');
-}
-
-console.log('hello from login page');
+      if (loginUser(email, password)) {
+        alert('Login successful! Redirecting to favorites...');
+  
+        // localStorage.setItem('lastEnteredEmail', email);
+  
+        window.location.href = 'favorites.html';
+      } else {
+        alert('Login failed. Check your email and password.');
+      }
+    });
+  });
+  
+  function loginUser(email, password) {
+      const userData = JSON.parse(localStorage.getItem(email));
+  
+      if (userData && userData.password === password) {
+          localStorage.setItem('loggedInUser', email);
+          console.log('User logged in successfully.');
+          return true;
+      }
+  
+      console.log('Invalid email or password.');
+      return false;
+  }
+  
+  function isLoggedIn() {
+      const loggedInUser = localStorage.getItem('loggedInUser');
+      return !!loggedInUser;
+  }
+  
+  function logoutUser() {
+      localStorage.removeItem('loggedInUser');
+      console.log('User logged out successfully.');
+  }
+  
 
 
 // TESTS
-loginUser('test Username', 'testpassword') //test login with correct info
-loginUser('false Username', 'testpassword') //test login with false info
+function testLogin() {
 
-// test login status
-console.log(`LOGGED IN?: ${isLoggedIn()}`);
-logoutUser('test Username', 'testpassword')
-console.log(`LOGGED IN?: ${isLoggedIn()}`);
+  loginUser('false Username', 'testpassword') //test login with false info
 
+  // test login status
+  loginUser('test@email.com', '12345');
+  
+  console.log(`LOGGED IN BEFORE?: ${isLoggedIn()}`);
 
-
+  logoutUser("test Username", "testpassword");
+  console.log(`LOGGED OUT?: ${!isLoggedIn()}`);
+}
+// testLogin();

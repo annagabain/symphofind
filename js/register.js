@@ -1,5 +1,3 @@
-// Placeholder REGISTER
-
 document.addEventListener('DOMContentLoaded', () => {
     const registerForm = document.getElementById('registerForm');
     
@@ -38,4 +36,4 @@ function registerUser(email, password) {
 }
 
 // TESTS
-registerUser('test Username', 'testpassword')
+// registerUser('test@email.com', '12345')
