@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.querySelector('.login-form form');
     const emailField = document.getElementById('email');
     const passwordField = document.getElementById('password');
+    const logoutButton = document.getElementById('logoutButton');
   
     // Prepopulate email field with stored email if available
     // const storedEmail = localStorage.getItem('lastEnteredEmail');
@@ -26,6 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Login failed. Check your email and password.');
       }
     });
+
+ 
+    logoutButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        logoutUser();
+        alert('You have been logged out.');
+        window.location.href = 'register-login.html'; // Redirect to login page
+    });
+
   });
   
   function loginUser(email, password) {
