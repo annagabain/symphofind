@@ -16,3 +16,18 @@ async function fetchEssentialComposers() {
 }
 
 fetchEssentialComposers();
+
+
+// async function fetchComposerWorks(composerId) {
+//     try {
+//       const url = `https://api.openopus.org/work/list/composer/${composerId}/all.json`;
+//       const response = await fetch(url);
+//       const data = await response.json();
+//       return data.works;
+//     } catch (error) {
+//       console.error("Error fetching composer works:", error);
+//       return []; // Return an empty array in case of error
+//     }
+//   }
+
+//   fetchComposerWorks(composerId)

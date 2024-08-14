@@ -2,7 +2,7 @@
 
 .music-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 1fr ;
     align-items: start;
 
     /* overflow: hidden; */
@@ -23,11 +23,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    p {
+        margin: 0 0 1rem; 
+    }
 }
 
 .composer-name {
     font-size: 1.25rem;
-    margin: 0;
+    margin-top: 1rem;
 }
 
 .search-filter {
@@ -66,4 +70,10 @@
 
 
     }
+}
+
+h2 {
+    color: var(--gold);
+    font-family: 'Merriweather', serif;
+    font-weight: 800;
 }
