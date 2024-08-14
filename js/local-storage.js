@@ -34,7 +34,3 @@ function removeItem(key) {
 function clearStorage() {
     localStorage.clear();
 }
-
-// Export the functions to use them in other modules
-// export { setItem, getItem, updateItem, removeItem, clearStorage };
-
