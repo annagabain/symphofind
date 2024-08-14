@@ -38,6 +38,7 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 0.75rem;
+    color: var(--brown);
     background-color: var(--beige);
     border: 1px solid;
     border-radius: 4px;

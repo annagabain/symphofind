@@ -1,17 +1,4 @@
 
-// Placeholder REGISTER
-function registerUser(username, password) {
-    
-    if (localStorage.getItem(username)) {
-        console.log('Username already taken.');
-        return false;
-    }
-
-    localStorage.setItem(username, JSON.stringify({ password }));
-    console.log('User registered successfully.');
-    return true;
-}
-
 // Placeholder LOG IN
 function loginUser(username, password) {
 
@@ -45,13 +32,13 @@ console.log('hello from login page');
 
 
 // TESTS
-registerUser('test Username', 'testpassword')
 loginUser('test Username', 'testpassword') //test login with correct info
 loginUser('false Username', 'testpassword') //test login with false info
 
 // test login status
-console.log(isLoggedIn('logged in?'));
+console.log(`LOGGED IN?: ${isLoggedIn()}`);
 logoutUser('test Username', 'testpassword')
-console.log(isLoggedIn('logged in?'));
+console.log(`LOGGED IN?: ${isLoggedIn()}`);
+
 
 
