@@ -3,6 +3,7 @@
 :root {
     --brown: #301505;
     --light-brown: #4E3628;
+    --background-overlay-brown: #1d0e06;
     --gold: #DFBC87;
     --offwhite: #F8F5F5;
     --beige: #DACCB8;
@@ -24,7 +25,25 @@
         flex-direction: column;
         min-height: 100vh;
         max-width: 1400px;
-        box-sizing: border-box;
+        /* box-sizing: border-box;
+
+
+        height: 100vh;
+        margin: 0;
+        padding: 0; */
+    }
+ 
+
+    /* the same image, used as a background for the homepage only 
+    and then on the other pages' headers */
+    #index-page-body,
+    header:not(#index-page-header) {
+        background:
+            url('../images/piano-key-and-notespexels-pixabay-210764.jpg') no-repeat center center fixed,
+            var(--background-overlay-brown);
+        background-size: cover;
+        background-blend-mode: overlay;
+        height: 100vh;
     }
 
     body,
@@ -47,6 +66,7 @@
         background-color: var(--beige);
     }
 
+
     header {
         padding: 0.5rem;
         text-align: center;
@@ -55,13 +75,13 @@
         justify-content: space-between;
     }
 
-    #logo{
+    #logo {
         max-width: 200px;
     }
 
     main {
-        flex: 1;
-      
+        /* flex: 1; */
+        padding: 0 3rem;
     }
 
 
