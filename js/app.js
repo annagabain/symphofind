@@ -23,5 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }
 
+
+
 );
+
+function saveComposerId(composerId) {
+    localStorage.setItem('selectedComposerId', composerId);
+  }
 

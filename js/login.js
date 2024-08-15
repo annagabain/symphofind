@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     } else {
-        console.error('Login form not found.');
+        // console.error('Login form not found.');
     }
 
     if (logoutButton) {
