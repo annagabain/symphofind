@@ -1,9 +1,3 @@
-// const greetLoggedInUser = document.getElementById('greetLoggedInUser');
-// greetLoggedInUser.innerHTML = (`<p>hi ${loggedInUser}</p>`)
-// greetLoggedInUser.innerHTML = (`<p>hello</p>`)
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const greetLoggedInUser = document.getElementById('greetLoggedInUser');
     const editLoginForm = document.getElementById('editLoginForm');

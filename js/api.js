@@ -17,7 +17,7 @@ async function fetchEssentialComposers() {
 
 fetchEssentialComposers();
 
-
+// keep for the next iteration with the composer detail page
 // async function fetchComposerWorks(composerId) {
 //     try {
 //       const url = `https://api.openopus.org/work/list/composer/${composerId}/all.json`;
