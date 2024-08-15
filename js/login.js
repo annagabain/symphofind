@@ -3,40 +3,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailField = document.getElementById('email');
     const passwordField = document.getElementById('password');
     const logoutButton = document.getElementById('logoutButton');
-  
-    // Prepopulate email field with stored email if available
-    // const storedEmail = localStorage.getItem('lastEnteredEmail');
-    // if (storedEmail) {
-    //   emailField.value = storedEmail;
-    // }
-  
-    loginForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-  
-      const email = emailField.value;
-      const password = passwordField.value;
-  
 
-      if (loginUser(email, password)) {
-        alert('Login successful! Redirecting to favorites...');
-  
-        // localStorage.setItem('lastEnteredEmail', email);
-  
-        window.location.href = 'favorites.html';
-      } else {
-        alert('Login failed. Check your email and password.');
-      }
-    });
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const email = emailField.value;
+            const password = passwordField.value;
+            if (loginUser(email, password)) {
+                alert('Login successful! Redirecting to favorites...');
+                window.location.href = 'favorites.html';
+            } else {
+                alert('Login failed. Check your email and password.');
+            }
+        });
+    } else {
+        console.error('Login form not found.');
+    }
 
- 
-    logoutButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        logoutUser();
-        alert('You have been logged out.');
-        window.location.href = 'register-login.html'; // Redirect to login page
-    });
-
-  });
+    if (logoutButton) {
+        logoutButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            logoutUser();
+            alert('You have been logged out.');
+            window.location.href = 'register-login.html';
+        });
+    } else {
+        console.error('Logout button not found.');
+    }
+});
   
   function loginUser(email, password) {
       const userData = JSON.parse(localStorage.getItem(email));
