@@ -9,7 +9,8 @@
 }
 
 section.login-form,
-section.register-form {
+section.register-form,
+section.edit-login-form {
     background-color: var(--light-brown);
     padding: 2rem;
     border-radius: 8px;
