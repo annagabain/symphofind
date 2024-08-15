@@ -1,5 +1,8 @@
 # Symphofind
 
+Live view (development in progress...)
+https://annagabain.github.io/symphofind/
+
 ### The Goal:
 
 Symphofind is a dynamic web application that harmonizes the art of searching with precision. Designed to offer a seamless and intuitive search experience, this platform allows users to explore and filter data effectively.
